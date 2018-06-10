@@ -10,7 +10,6 @@ var networkStat = {
         ["US - us.turtlepool.space", "https://us.turtlepool.space/api"],
         ["US - ny.minetrtl.us", "https://blocks.turtle.link/pool/ny.minetrtl.us"],
         ["US - z-pool.com", "https://z-pool.com/api"],
-        ["US - turtle.bathmatminingpools.com", "https://api.turtle.bathmatminingpools.com/api"],
         ["US - turtlepower.challengecoin.io", "https://blocks.turtle.link/pool/turtlepower.challengecoin.io"],
         //EU
         ["EU - eu.turtlepool.space", "https://eu.turtlepool.space/api"],
@@ -32,5 +31,7 @@ var networkStat = {
     ]
 };
 var networkStat2 = {
-    "trtl": [[""]]
+    "trtl": [
+        ["US - turtle.bathmatminingpools.com", "https://api.turtle.bathmatminingpools.com/api"]
+    ]
 };
