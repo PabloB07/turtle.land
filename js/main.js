@@ -210,6 +210,26 @@ $(function() {
     });
 });
 
+$(function() {
+    $('.nav button').on('click', function(){ 
+        if($('.navbar-toggle').css('display') !='none'){
+            $('.navbar-toggle').trigger( "click" );
+        }
+    });
+});
+
+$(function(){
+    $("#nav .dropdown").hover(
+      function() {
+        $('#products-menu.dropdown-menu', this).stop( true, true ).fadeIn("fast");
+        $(this).toggleClass('open');
+      },
+      function() {
+        $('#products-menu.dropdown-menu', this).stop( true, true ).fadeOut("fast");
+        $(this).toggleClass('open');
+      });
+  });
+
 function hex2a(hexx) {
     var hex = hexx.toString();//force conversion
     var str = '';
