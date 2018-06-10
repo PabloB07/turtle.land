@@ -20,71 +20,41 @@
 </head>
 <body>
 
-<div class="navbar navbar-default navbar-fixed-top" role="navigation">
-    <div class="container">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+	<div class="navbar navbar-default navbar-fixed-top" role="navigation" id="accordion">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                 <span class="sr-only">Menu</span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand " href="#"><img src="img/icon_light.png"> <strong>TURTLE</strong>.LAND</a>
-			<div id="stats_updated"><i class="fa fa-bolt"></i></div>
-        </div>
-		
-        <div class="collapse navbar-collapse">
-		 
-            <ul class="nav navbar-nav navbar-left explorer_menu">
+                <a class="navbar-brand " href="#"><img src="img/icon_light.png"> <strong>TURTLE</strong>.LAND</a>
+            </div>
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav navbar-left explorer_menu">
+                    <li data-toggle="collapse" data-parent="#accordion" data-target=".navbar-collapse"><a class="hot_link" data-page="home.html" href="#"><i class="fas fa-braille" aria-hidden="true" ></i> Explorer</a></li>
+                    <li data-toggle="collapse" data-parent="#accordion" data-target=".navbar-collapse"><a class="hot_link" data-page="pools.html" href="#pools"><i class="fab fa-connectdevelop" aria-hidden="true"></i> Pools</a></li>
+                    <li data-toggle="collapse" data-parent="#accordion" data-target=".navbar-collapse"><a class="hot_link" data-page="pw.html" href="#pw"><i class="fas fa-qrcode" aria-hidden="true"></i> PaperWallet</a></li>
+                    <li data-toggle="collapse" data-parent="#accordion" data-target=".navbar-collapse"><a class="hot_link" data-page="links.html" href="#links"><i class="fas fa-question" aria-hidden="true"></i> Links/Info</a></li>
+                    <li style="display:none;"><a class="hot_link" data-page="miner.html" href="#m"><i class="fa fa-cubes"></i> Block </a></li>
+                    <li style="display:none;"><a class="hot_link" data-page="blockchain_transaction.html" href="#blockchain_transaction"><i class="fa fa-cubes"></i> Transaction </a></li>
+                    <li style="display:none;"><a class="hot_link" data-page="blockchain_payment_id.html" href="#blockchain_payment_id"><i class="fa fa-cubes"></i> Transactions by Payment ID</a></li>
+                    <li><a style="display:none;" class="hot_link" data-page="support.html" href="#support"> <i class="fa fa-comments"></i> Help </a></li>
+                </ul>
 
-			    <li><a class="hot_link" data-page="home.html" href="#">
-
-                    <i class="fa fa-cubes" aria-hidden="true"></i> Block Explorer
-                </a></li>
-
-		<li><a class="hot_link" data-page="check_txn.html" href="#check_txn">
-                    <i class="fa fa-exchange" aria-hidden="true"></i> Check TXNs
-                </a></li>
-				
-		<li><a class="hot_link" data-page="pools.html" href="#pools">
-                    <i class="fa fa-gavel" aria-hidden="true"></i> Pools
-                </a></li>
-				
-		<li><a class="hot_link" data-page="api.html" href="#api">
-                    <i class="fa fa-code" aria-hidden="true"></i> API
-                </a></li>
-
-                <li style="display:none;"><a class="hot_link" data-page="blockchain_block.html" href="#blockchain_block"><i class="fa fa-cubes"></i> Block
-                </a></li>
-
-                <li style="display:none;"><a class="hot_link" data-page="blockchain_transaction.html" href="#blockchain_transaction"><i class="fa fa-cubes"></i> Transaction
-                </a></li>
-				
-				<li style="display:none;"><a class="hot_link" data-page="blockchain_payment_id.html" href="#blockchain_payment_id"><i class="fa fa-cubes"></i> Transactions by Payment ID
-                </a></li>
-
-                <li><a  style="display:none;" class="hot_link" data-page="support.html" href="#support">
-                    <i class="fa fa-comments"></i> Help
-                </a></li> 
-
-<!-- //-->
-            </ul>
-            
-					
-			<div class="nav col-md-6 navbar-right explorer-search">
-				<div class="input-group">
-					<input class="form-control" placeholder="Search by block height / hash, transaction hash, payment id" id="txt_search">
-					<span class="input-group-btn"><button class="btn btn-default" type="button" id="btn_search">
+                <div class="nav col-md-5 navbar-right explorer-search">
+                    <div class="input-group">
+                        <input class="form-control" placeholder="block height/hash, transaction hash, payment id" id="txt_search">
+                        <span class="input-group-btn"><button class="btn btn-default" type="button" id="btn_search">
 						<span><i class="fa fa-search"></i> Search</span>
-					</button></span>
-				</div>
-			</div>
-		  
-		  
-		  
-		</div>
-	  </div>
-</div>
+                        </button>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
 	
 <script>
@@ -231,50 +201,37 @@ $('#txt_search').keyup(function(e){
 
 <div id="content">
 	<div class="container">
-
 		<div id="page"></div>
-
-		<p id="loading" class="text-center"><i class="fa fa-circle-o-notch fa-spin"></i></p>
-
+		<p id="loading" class="text-center"><i class="fas fa-circle-notch fa-spin"></i></p>
 	</div>
 </div>
 
 <footer>
 	<div class="container">
-                <div class="row">
-			<div class="col-lg-12 col-md-4 col-sm-4 text-center" id="donations" style="word-wrap:break-word; display:none;">
-                        Donations welcome:<br/>
-                        <span id="donationAddress"></span><br/><br/>
-			</div>
-                </div>
 		<div class="row">
-			<div class="col-lg-4 col-md-3 col-sm-3 text-center">
-				<p>
-					<small>
-						&copy; 2018 <strong>TRTLD13</strong> 
-					</small>
-				</p>
-			</div>
-			<div class="col-lg-4 col-md-3 col-sm-6 text-center">
-				<p>
-					<small>
-					<!-- This copyright should be left intact -->
-				
-					Powered by <a target="_blank" href="https://github.com/turtlecoin/block-explorer"><i class="fa fa-github"></i> Turtle Blockchain Explorer</a> v. 1.0.0.<br />
-					<span class="text-muted">Code from <strong>Karbowanec Blockchain Explorer</strong><br />
-					<span class="text-muted">Partially based on <strong>cryptonote-universal-pool</strong><br />
-					open sourced under the <a href="http://www.gnu.org/licenses/gpl-2.0.html">GPL</a></span>
-					</small>
-				</p>
-			</div>
-			<div class="col-lg-4 col-md-3 col-sm-3 text-center">
-                                <ul class="list-unstyled">
-				        <li><a href="http://turtlecoin.lol/">TURTLECOIN.LOL</a></li>
-                               </ul>
+			<div class="col-lg-12 col-md-12 col-sm-12 cl-xs-12 text-center" id="donations" style="word-wrap:break-word; display:none;">
+				Donations welcome:<br/>
+				<strong><a href="turtlecoin:TRTLuxu33ufRXw9kFiYFR9BqfJyvfr7jyR9SKwrXmx5R1iem9GSaQozKzUu3mc8vN17fWPriWueXX2vH6CWZg6oEGXoJ4HdN7ru"><span id="donationAddress"></span></a></strong><br/><br/>
 			</div>
 		</div>
-    </div>
+		<div class="row">
+			<div class="col-lg-12 col-md-12 col-sm-12 cl-xs-12 text-center">
+				<p>
+					<small>
+				<a target="_blank" href="http://turtlecoin.lol/"><i class="fab fa-github"></i> TURTLECOIN.LOL</a>
+					</small>
+				</p>
+				<p>
+					<small>
+				<!-- This copyright should be left intact -->
+				Code from Karbowanec Blockchain Explorer Partially based on cryptonote-universal-pool open sourced under the GPL.
+				</small>
+				</p>
+			</div>
+		</div>
+	</div>
 </footer>
+<!--
 <a href="#" class="scrollup"><i class="fa fa-chevron-circle-up"></i></a>
 	<script type="text/javascript">
 			jQuery(function($) { $(document).ready(function() {
@@ -301,5 +258,6 @@ $('#txt_search').keyup(function(e){
 					
 			});});
 	</script>
+-->
 </body>
 </html>
