@@ -94,7 +94,7 @@ var displayChart = function displayChart() {
         datasets: [{
             data: sortedPools.map(function(p) { return p[1]; }),
             backgroundColor: sortedPools.map(function(p) { return p[2]; }),
-            borderWidth: 1,
+            borderWidth: 3,
             segmentShowStroke: false
         }]
     };
@@ -106,15 +106,13 @@ var displayChart = function displayChart() {
             },
             title: {
                 display: true,
-                text: 'Network Hashrate Visualization',
+                text: 'Pools Hashrate',
                 fontSize: 18,
-                fontColor: '#2ecc71'
+                fontColor: '#fff'
             },
             legend: {
-                position: 'bottom',
-                labels: {
-                    fontColor: '#c8c8c8'
-                },
+                display: false,
+                
             },
             layout: {
                 padding: {
