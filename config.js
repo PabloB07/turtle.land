@@ -30,7 +30,7 @@ var networkStat = {
 var networkStat2 = {
     "trtl": [
         ["trtl.pool.gntl.co.uk", "https://trtl.pool.gntl.co.uk/api"],
-        ["trtl.semipool.com", "https://trtl-api.semipool.com/"],
+        ["trtl.semipool.com", "https://trtl-api.semipool.com"],
         ["turtle.bathmatminingpools.com", "https://api.turtle.bathmatminingpools.com/api"],
         ["trtl.cryptopool.space", "https://trtl.cryptopool.space/api"]
     ]
