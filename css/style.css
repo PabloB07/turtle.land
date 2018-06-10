@@ -124,9 +124,9 @@ table {
     font-size: 12px;
 }
 
-thead {
+/*thead {
     background-color: #1d1d1d;
-}
+}*/
 
 #network-hash > thead > tr > th {
     cursor: pointer;
@@ -151,6 +151,5 @@ thead {
 #block-range-wrapper {
     font-size: 12px;
     line-height: 20px;
-    color: #404040;
     float: right;
 }
