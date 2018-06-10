@@ -1,7 +1,7 @@
 # Turtle.Land - Blockchain-Explorer for https://turtlecoin.lol
 Hi, welcome on my custom block explorer for TurtleCoin.LoL , block explorer was forked from TurtleCoin GitHub page.
-If you wanna know more about TurtleCoin you can come to Discord on http://chat.turtlecoin.lol/ (https://discordapp.com/invite/rB6qheE)
-And you can vitis GitHub on http://github.turtlecoin.lol/ (https://github.com/turtlecoin)
+If you wanna know more about TurtleCoin you can come to Discord on https://chat.turtlecoin.lol/ (https://discordapp.com/invite/rB6qheE)
+And you can vitis GitHub on https://github.turtlecoin.lol/ (https://github.com/turtlecoin)
 
 
 ##Disclaimer
