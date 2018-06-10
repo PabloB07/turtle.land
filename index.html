@@ -8,40 +8,14 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
 	<link rel="shortcut icon" href="favicon.ico">
 	<link rel="icon" type="image/icon" href="favicon.ico" >
-	<title>TurtleCoin [TRTL] Block Explorer</title>
-	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-timeago/1.4.0/jquery.timeago.min.js"></script>
-	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-sparklines/2.1.2/jquery.sparkline.min.js"></script>
-	<script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
-	<script src="js/bootstrap.js"></script>
 	<link href="css/style.css" rel="stylesheet" id="theme_link">
-	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+	<title>TurtleCoin [TRTL] Block Explorer</title>
+	<script src="js/compressed.js"></script>
 	<script src="./config.js"></script>
 	<script src="js/main.js"></script>
 </head>
 <body>
-		<nav class="navbar navbar-expand-md bg-primary navbar-dark fixed-top">
-				<div class="container">
-					<a class="navbar-brand" href="#"><img src="img/icon_light.png"><strong>TURTLE</strong>.LAND</a>
-					<button id="nav-btn" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarDiv" aria-expanded="false" aria-label="Toggle navigation">
-					<span class="navbar-toggler-icon"></span>
-				</button>
-					<div class="collapse navbar-collapse" id="navbarDiv">
-						<ul class="navbar-nav mr-auto">
-							<li class="nav-item active">
-								<a class="nav-link" href="#home" data-toggle="collapse" data-target=".navbar-collapse.show">Home <span class="sr-only">(current)</span></a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="#about-us" data-toggle="collapse" data-target=".navbar-collapse.show">About</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="#pricing" data-toggle="collapse" data-target=".navbar-collapse.show">Pricing</a>
-							</li>
-						</ul>
-					</div>
-				</div>
-			</nav>
-<!-- <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
 <div class="container">
 	<div class="navbar-header">
 		<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -54,10 +28,15 @@
 	</div>
 	<div class="collapse navbar-collapse">			 
 		<ul class="nav navbar-nav navbar-left explorer_menu">	
-			<li><a class="hot_link" data-page="home.html" href="#" data-toggle="collapse" data-target=".nav-collapse.in">	<i class="fa fa-cubes" aria-hidden="true"></i> Explorer</a></li>	
-			<li><a class="hot_link" data-page="check_txn.html" href="#check_txn" data-toggle="collapse" data-target=".nav-collapse.in"><i class="fa fa-exchange" aria-hidden="true"></i> Check TXNs</a></li>					
-			<li><a class="hot_link" data-page="pools.html" href="#pools" data-toggle="collapse" data-target=".nav-collapse.in"><i class="fa fa-gavel" aria-hidden="true"></i> Pools</a></li>					
-			<li><a class="hot_link" data-page="api.html" href="#api" data-toggle="collapse" data-target=".nav-collapse.in"><i class="fa fa-code" aria-hidden="true"></i> API</a></li>
+			<li><a class="hot_link menu" data-page="home.html" href="#"><i class="fa fa-cubes" aria-hidden="true"></i> Explorer</a></li>	
+			<li><a class="hot_link menu" data-page="pools.html" href="#pools"><i class="fa fa-gavel" aria-hidden="true"></i> Pools</a></li>
+			<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Tools <span class="caret"></span></a>
+				<ul class="dropdown-menu">
+					<li><a class="hot_link menu" data-page="check_txn.html" href="#check_txn"><i class="fa fa-exchange" aria-hidden="true"></i> Check TXNs</a></li>
+					<li><a class="hot_link menu" data-page="check_txn.html" href="#check_txn"><i class="fa fa-exchange" aria-hidden="true"></i> Paper Wallet</a></li>
+					<li><a class="hot_link menu" data-page="api.html" href="#api"><i class="fa fa-exchange" aria-hidden="true"></i> Api/Node</a></li>
+				</ul>										
+			<li><a class="hot_link menu" data-page="links.html" href="#links"><i class="fa fa-code" aria-hidden="true"></i> Links</a></li>
 
 			<li style="display:none;"><a class="hot_link" data-page="blockchain_block.html" href="#blockchain_block"><i class="fa fa-cubes"></i> Block</a></li>	
 			<li style="display:none;"><a class="hot_link" data-page="blockchain_transaction.html" href="#blockchain_transaction"><i class="fa fa-cubes"></i> Transaction</a></li>
@@ -74,7 +53,8 @@
 	</div>			  
 	</div>
 </div>
-</div> -->
+</div> 
+
 <script>
 $('#btn_search').click(function(e) {
 var text = document.getElementById('txt_search').value;

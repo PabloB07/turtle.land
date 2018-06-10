@@ -128,7 +128,7 @@ function fetchLiveStats() {
         type: 'GET',
         cache: 'false'
     }).done(function(data){
-        pulseLiveUpdate();
+     //   pulseLiveUpdate();
         lastStats = data;
         currentPage.update();
     }).always(function () {
@@ -200,6 +200,14 @@ urlParam = function(name){
 
 $(function() {
     $('[data-toggle="tooltip"]').tooltip();
+});
+
+$(function() {
+    $('.nav a.menu').on('click', function(){ 
+        if($('.navbar-toggle').css('display') !='none'){
+            $('.navbar-toggle').trigger( "click" );
+        }
+    });
 });
 
 function hex2a(hexx) {
