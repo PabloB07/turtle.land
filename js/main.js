@@ -108,7 +108,7 @@ function formatPaymentLink(hash){
 
 function pulseLiveUpdate(){
     var stats_update = document.getElementById('stats_updated');
-    stats_update.style.transition = 'opacity 100ms ease-out';
+   // stats_update.style.transition = 'opacity 100ms ease-out';
     stats_update.style.opacity = 1;
     setTimeout(function(){
         stats_update.style.transition = 'opacity 7000ms linear';
