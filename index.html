@@ -13,14 +13,35 @@
 	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-timeago/1.4.0/jquery.timeago.min.js"></script>
 	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-sparklines/2.1.2/jquery.sparkline.min.js"></script>
 	<script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
-	<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+	<script src="js/bootstrap.js"></script>
 	<link href="css/style.css" rel="stylesheet" id="theme_link">
 	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 	<script src="./config.js"></script>
 	<script src="js/main.js"></script>
 </head>
 <body>
-<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+		<nav class="navbar navbar-expand-md bg-primary navbar-dark fixed-top">
+				<div class="container">
+					<a class="navbar-brand" href="#"><img src="img/icon_light.png"><strong>TURTLE</strong>.LAND</a>
+					<button id="nav-btn" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarDiv" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+					<div class="collapse navbar-collapse" id="navbarDiv">
+						<ul class="navbar-nav mr-auto">
+							<li class="nav-item active">
+								<a class="nav-link" href="#home" data-toggle="collapse" data-target=".navbar-collapse.show">Home <span class="sr-only">(current)</span></a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#about-us" data-toggle="collapse" data-target=".navbar-collapse.show">About</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#pricing" data-toggle="collapse" data-target=".navbar-collapse.show">Pricing</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+<!-- <div class="navbar navbar-default navbar-fixed-top" role="navigation">
 <div class="container">
 	<div class="navbar-header">
 		<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -53,7 +74,7 @@
 	</div>			  
 	</div>
 </div>
-</div>
+</div> -->
 <script>
 $('#btn_search').click(function(e) {
 var text = document.getElementById('txt_search').value;
