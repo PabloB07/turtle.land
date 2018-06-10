@@ -29,9 +29,9 @@ var networkStat = {
 };
 var networkStat2 = {
     "trtl": [
-        ["EU - trtl.pool.gntl.co.uk", "https://trtl.pool.gntl.co.uk/api"],
-        ["WordWide - trtl.semipool.com", "https://trtl-api.semipool.com/"],
+        ["trtl.pool.gntl.co.uk", "https://trtl.pool.gntl.co.uk/api"],
+        ["trtl.semipool.com", "https://trtl-api.semipool.com/"],
         ["turtle.bathmatminingpools.com", "https://api.turtle.bathmatminingpools.com/api"],
-        ["WordWide - trtl.cryptopool.space", "https://trtl.cryptopool.space/api"]
+        ["trtl.cryptopool.space", "https://trtl.cryptopool.space/api"]
     ]
 };
