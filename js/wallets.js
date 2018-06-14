@@ -15,3 +15,7 @@ var show_linux = function() {
   document.getElementById("win").style.display = "none";
   document.getElementById("linux").style.display = "block";
 };
+
+var show_applegui = function() {
+  document.getElementById("applegui").style.display = "block";
+};
