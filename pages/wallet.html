@@ -12,105 +12,47 @@
 
     <div class="col-sm-12 col-md-24 d-print-none">
 			<center>
-      <h3>On what you wanna mine?</h3>
+      <h3>Choose an operating system</h3>
           <button class="btn btn-default" onclick="js:show_apple();" type="button" value="apple">Apple</button>
           <button class="btn btn-default" onclick="js:show_win();" type="button" value="win">Windows</button>
           <button class="btn btn-default" onclick="js:show_linux();" type="button" value="linux">Linux</button><br /><br />
 			</center>
       <div id="apple" style="display:none;">
         <center>
-					<button class="btn btn-default" onclick="js:950;" type="button" value="Generate wallet">GTX 950/950M</button>		
+					<button class="btn btn-default" onclick="js:show_applegui();" type="button" value="Generate wallet">GUI</button>
+					<button class="btn btn-default" onclick="js:show_applecli();" type="button" value="Generate wallet">CLI</button>
         </center>
       </div>
-     
        <div id="win" style="display:none;">
         <center>
-					<button class="btn btn-default" onclick="js:950;" type="button" value="Generate wallet">RX 450/550</button>			
+					<button class="btn btn-default" onclick="js:show_wingui();" type="button" value="Generate wallet">GUI</button>
+					<button class="btn btn-default" onclick="js:show_wincli();" type="button" value="Generate wallet">CLI</button>
         </center>
       </div>
-      
       <div id="linux" style="display:none;">
         <center>
-					<button class="btn btn-default" onclick="js:950;" type="button" value="Generate wallet">RX 450/550</button>				
+					<button class="btn btn-default" onclick="js:show_linuxgui();" type="button" value="Generate wallet">GUI</button>
+					<button class="btn btn-default" onclick="js:show_linuxcli();" type="button" value="Generate wallet">CLI</button>
+        </center>
+      </div>
+			
+			<div id="applegui" class="col-sm-12 col-md-24 d-print-none" style="display:none;">
+        <center>
+					<img src="https://raw.githubusercontent.com/turtlecoin/turtle-wallet-go/master/turtlecoinnestlogo.png"> <br />
+				<ul>
+				<li>Unzip the folder and launch <strong>TurtleCoin-Nest.exe</strong> (Make sure you leave everything as is in the folder)</li>
+				<li>Make sure Walletd.exe or Turtlecoind.exe are not running before you start TurtleCoin-Nest</li>
+				<li>When you open a wallet in TurtleCoin Nest, you will see a black empty walletd window. You must keep it open. It will close automatically when you close your wallet. If it does not close automatically a few seconds after you close your wallet, you can close it manually.</li>
+		  	</ul>
+					<p>Download Link: </p><a href="https://github.com/turtlecoin/turtle-wallet-go/releases"> GitHub - http://TurtleCoin-Nest-X.XX-Mac.zip</a> </br>
+					<p>Screen:</p> </br>
+					<img src="https://raw.githubusercontent.com/turtlecoin/turtle-wallet-go/master/Screenshots/MainScreen.png"> <br />
+					
         </center>
       </div>
   
     </div>
   </div>
-
-  <div id="step2" class="row" style="display:none;">
-    <div class="col-sm-12 col-md-24">
-      <h4 class="d-print-none">Step 2</h4>
-			<i><p class="d-print-none">Write down your public address, or copy paste it somewhere. Anyone with this address can send you money.</p></i>
-      <h4 class="d-print-block">Public Address</h4>
-      <div class="col border border-success" style="padding: 1em;">
-      <center>
-        <strong>
-          <h2>
-						<span  style="font-family: monospace, monospace; word-wrap: break-word;" class="" id="address_widget">Reticulating Splines...</span>
-					</h2>
-
-        </strong>
-      </center>
-      </div>
-      <!--<p class="d-print-block">This is your wallet address. Anybody with this address can send you money.</p>
-
-        <span class="qrcode d-print-none" id="address_qr_widget" onclick="js:toggle_qr();"></span>
-
-
-      <br />
-      <center class="d-print-none">
-        <button class="btn btn-default" href="#" onclick="js:toggle_qr();">Click to see QR Code</button>
-      </center>
-    </div>
-  </div> -->
-  <div class="row" >
-  <div class="col-12">
-    <h4 class="d-print-none">Step 3</h4>
-    <h4 class="d-print-block">Seed Phrase</h4>
-		<i><p class="d-print-none">Copy your seed phrase and keys. If you lose your wallet, these can be used to restore your money. That also means you need to keep them safe and private.</p></i>
-		<i><p class="d-print-block">This is your seed phrase. You can use it to regenerate your wallet if you lose it.</p></i>
-    <em>
-      <div class="col border border-danger" style="font-family: monospace, monospace; padding: 1em;">
-        <strong>Seed Phrase:</strong>
-        <span class="private">
-          <span id="mnemonic_widget">Reticulating Splines...</span>
-        </span>
-      </div>
-    </em>
-  </div>
-  </div> 
-  <br>
-  <div class="row d-print-block">
-    <div class="col-12">
-      <h4 class="d-print-block">Wallet Keys</h4>
-			<i><p>These are the keys you need to regenerate your wallet.</p></i>
-    </div>
-  </div>
-  <div class="col">
-     <!--p class="d-print-none">Print or write down these keys and keep them safe. Without them you cannot access your money. There are no second chances.</p-->
-    <div class="row border border-danger" style="padding:1em;">
-      <div class="col" style="overflow:visible">
-        <strong>Spend Key:</strong>
-        <span class="private">
-          <span style="font-family: monospace, monospace; word-wrap: break-word;" id="spend_key_widget">Generating...</span>
-        </span>
-      </div>
-      <div class="col" style="overflow:visible">
-        <strong>View Key:</strong>
-        <span class="private">
-          <span style="font-family: monospace, monospace; word-wrap: break-word;" id="view_key_widget">Generating...</span>
-        </span>
-      </div>
-      <!-- <div class="col-6">
-        <strong>GUI Wallet Key:</strong>
-        <span class="private-sm">
-          <small style="font-family: monospace, monospace; word-wrap: break-word;" id="wallet_keys_widget">Generating...</small>
-        </span>
-      </div> -->
-    </div>
-
-
 
 </div>
 <div class="row d-print-none">
@@ -123,4 +65,4 @@
 
 </div>
 </div>
-	<script type="text/javascript" src="/js/wallets.js"></script>
+<script type="text/javascript" src="/js/wallets.js"></script>
