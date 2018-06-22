@@ -34,7 +34,7 @@ $.fn.update = function(txt){
     return this;
 };
 
-function updateTextClasses(className, text){
+ function updateTextClasses(className, text){
     var els = document.getElementsByClassName(className);
     for (var i = 0; i < els.length; i++){
         var el = els[i];
@@ -61,7 +61,7 @@ function updateTextLinkable(elementId, text){
 
 var currentPage;
 var lastStats;
-var numberFormatter = new Intl.NumberFormat('en-US'); // US formatting, force commas.
+var numberFormatter = new Intl.NumberFormat('en'); // US formatting, force commas.
 
 function localizeNumber(number) {
     return numberFormatter.format(number);
@@ -198,9 +198,9 @@ urlParam = function(name){
     }
 }
 
-$(function() {
+/* $(function() {
     $('[data-toggle="tooltip"]').tooltip();
-});
+}); */
 
 $(function() {
     $('.nav a.menu').on('click', function(){ 
@@ -217,6 +217,24 @@ $(function() {
         }
     });
 });
+
+function tra() {
+    var x = document.getElementById("tradiv");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+};
+
+function blo() {
+    var x = document.getElementById("blodiv");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+};
 
 $(function(){
     $("#nav .dropdown").hover(

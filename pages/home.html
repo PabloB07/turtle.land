@@ -31,11 +31,10 @@
     <div class="col-sm-6 col-md-6">
         <div class="panel panel-default">
             <div class="panel-heading">
-                <h3 class="panel-title"><i class="fas fa-chart-area" aria-hidden="true"></i> Difficulty chart
-                    
-                </h3>
+                <input type="button" class="btn btn-default btn-xs pull-right" id="loadMoreBlocks" value="Load more">
+                <h3 class="panel-title"><i class="fas fa-chart-area" aria-hidden="true"></i> Difficulty chart </h3>
             </div>
-            <div class="panel-body-diff chart-wrapper">
+            <div class="panel-body-diff chart-wrapper"> 
                 <canvas id="difficultyChart" height="170"></canvas>
             </div>
         </div>
@@ -44,11 +43,56 @@
 
 <div class="panel panel-default">
     <div class="panel-heading">
+            <div class="pull-right">
+            <a href="https://www.facebook.com/groups/204815433401566/" target="_blank"><i class="fab fa-facebook-square" aria-hidden="true"></i>&nbsp;</a> 
+            <a href="https://twitter.com/_turtlecoin" target="_blank"><i class="fab fa-twitter-square" aria-hidden="true"></i>&nbsp;</a>
+            <a href="https://trtl.reddit.com/" target="_blank"><i class="fab fa-reddit-square" aria-hidden="true"></i>&nbsp;</a>
+            </div>
+        <h3 class="panel-title"><i class="fas fa-grip-horizontal" aria-hidden="true"></i> Links          
+        </h3>
+    </div>
+    <div class="panel-body">
+            <div class="row">
+                    <div class="col-lg-6 col-md-12 col-sm-12">
+                        <p>
+                                <a href="https://turtlecoin.lol/" target="_blank"><i class="fab fa-angellist" aria-hidden="true"></i>&nbsp; TurtleCoin WebSite</a>
+                        </p>
+                        <p>
+                            <a href="https://github.com/turtlecoin" target="_blank"><i class="fab fa-github-square" aria-hidden="true"></i>&nbsp; Turtle Github - Check Turtle progress</a>
+                        </p>
+                        <p>
+                                <a href="https://discordapp.com/invite/rB6qheE" target="_blank"><i class="fab fa-discord" aria-hidden="true"></i>&nbsp; Turtle Discord - Chat,memes,trolling</a>
+                        </p>
+                        <p>
+                                <a href="https://discordapp.com/invite/rB6qheE" target="_blank"><i class="fab fa-medium-m" aria-hidden="true"></i>&nbsp; Turtle Medium - Articles from dev team</a>
+                        </p>
+                    </div>
+                    <div class="col-lg-6 col-md-12 col-sm-12">
+                        <p>
+                                <a href="https://turtlecoin-faucet.xhub.cloud/" target="_blank"><i class="fas fa-coins" aria-hidden="true"></i>&nbsp; Free TurtleCoins - Faucet</a>
+                        </p>
+                        <p>
+                                <a href="#wallet"><i class="fas fa-wallet" aria-hidden="true"></i>&nbsp; Wallets - GUI,CLI</a>
+                        </p>
+                        <p>
+                                <a href="#miners"><i class="fas fa-toolbox" aria-hidden="true"></i>&nbsp; Miners download</a>
+                        </p>
+                        <p>
+                                <a href="#chain"><i class="fas fa-link" aria-hidden="true"></i>&nbsp; Blockchain - download latest snap of chain</a>
+                        </p>
+                    </div>
+                </div>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+            <input type="button" class="btn btn-default btn-xs pull-right" onclick="tra()" value="Expand">
         <h3 class="panel-title"><i class="fas fa-code-branch" aria-hidden="true"></i> Transaction pool
             <span id="mempool_count" class="badge"></span>           
         </h3>
     </div>
-    <div class="panel-body">
+    <div id="tradiv" class="panel-body" style="display:none;">
         <div class="table-responsive">
             <table class="table table-hover" id="mem_pool_table">
                 <thead>
@@ -69,12 +113,13 @@
 
 <div class="panel panel-default">
     <div class="panel-heading">
+            <input type="button" class="btn btn-default btn-xs pull-right" onclick="blo()" value="Expand">
         <h3 class="panel-title">
             <i class="fas fa-dolly" aria-hidden="true"></i> Recent blocks
-            <span id="block-range-wrapper" style="float:right"><span id="block-range">______ - ______</span></span>
+             <span id="block-range-wrapper" style="display:none;"><span id="block-range" style="display:none;" >______ - ______  </span></span> 
         </h3>
     </div>
-    <div class="panel-body">
+    <div id="blodiv" class="panel-body" style="display:none;">
         <div class="input-group">
             <a id="next-page" href="#" class="btn btn-default input-group-addon disabled"><i class="fa fa-arrow-left" aria-hidden="true"></i> Newer</a>
             <span class="input-group-addon">№</span>
@@ -99,9 +144,6 @@
                 </tbody>
             </table>
         </div>
-        <p class="text-center">
-            <button type="button" class="btn btn-default" id="loadMoreBlocks">Load More</button>
-        </p>
     </div>
 </div>
 
@@ -407,7 +449,7 @@
             localizeNumber(blocks[0].height),
             localizeNumber(blocks[blocks.length - 1].height)].join(' - ')
         updateText('block-range', rendered);
-    }
+    } 
 
     function calcAvgHashRate() {
         var sum = Difficulties.reduce(add, 0);
@@ -729,9 +771,9 @@
         diffChart.update();
     }
 
-    $(function() {
+/*     $(function() {
         $('[data-toggle="tooltip"]').tooltip();
-    });
+    }); */
 
     function getReadableTime(seconds) {
 

@@ -11,9 +11,16 @@
 	<link href="css/bootstrap.css" rel="stylesheet" id="theme_link" type='text/css'>
 	<link href="css/style.css" rel="stylesheet" id="theme_link" type='text/css'>
 	<title>TurtleCoin [TRTL] Block Explorer - Turtle.Land</title>
-	<script src="./js/compressed.js"></script>
-	<script src="./js/Chart.bundle.min.js" async></script>
-	<script src="./config.js" async></script>
+<!--  	<script  src="./js/jq/jquery.js"></script>
+	<script  src="./js/jq/jquery.sparkline.js"></script>
+	<script  src="./js/jq/jquery.timeago.js"></script>
+	<script  src="./js/jq/popper.js"></script>
+	<script src="./js/jq/tooltip.js"></script>
+	<script  src="./js/jq/underscore.js"></script>
+	<script  src="js/Chart.bundle.js"></script>
+	<script  src="js/font-awesome.js"></script>  -->
+	<script src="./js/compressed.js"></script>  
+	<script src="./config.js"></script>
 	<script src="./js/main.js"></script>
 
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-120974778-1"></script>
@@ -23,6 +30,8 @@
 	gtag('js', new Date());
 
 	gtag('config', 'UA-120974778-1');
+
+	
 	</script>
 
 </head>
@@ -41,17 +50,23 @@
 	<div class="collapse navbar-collapse">
 		<ul class="nav navbar-nav navbar-left explorer_menu">
 			<li><a class="hot_link menu" data-page="home.html" href="#"><i class="fas fa-braille" aria-hidden="true"></i> Explorer</a></li>
-			<li><a class="hot_link menu" data-page="check_txn.html" href="#check_txn"><i class="fas fa-code-branch" aria-hidden="true"></i> Check TXNs</a></li>
+			<li><a class="hot_link menu" data-page="check_txn.html" href="#check_txn"><i class="far fa-check-square" aria-hidden="true"></i> TXNs</a></li>
 			<li><a class="hot_link menu" data-page="pools.html" href="#pools"><i class="fab fa-connectdevelop" aria-hidden="true"></i> Pools</a></li>
 			<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="fas fa-wrench" aria-hidden="true"> </i>  Tools <span class="caret"></span></a>
 				<ul id="products-menu" class="dropdown-menu">
-					<li><a class="hot_link menu" data-page="wallet.html" href="#wallet"><i class="fas fa-wallet" aria-hidden="true"></i> Wallets</a></li>
 					<li><a class="hot_link menu" data-page="pw.html" href="#pw"><i class="fas fa-qrcode" aria-hidden="true"></i> Paper Wallet</a></li>
-					<li><a class="hot_link menu" data-page="miners.html" href="#miners"><i class="fas fa-toolbox" aria-hidden="true"></i> Miners</a></li>
 					<li><a class="hot_link menu" target="_blank" href="https://turtlecoin-faucet.xhub.cloud/"><i class="fas fa-coins" aria-hidden="true"></i> Free TurtleCoin</a></li>
 					<li><a class="hot_link menu" data-page="api.html" href="#api"><i class="fas fa-server" aria-hidden="true"></i> Api/Node</a></li>
-				</ul>
-			<li><a class="hot_link menu" data-page="links.html" href="#links"><i class="fas fa-question" aria-hidden="true"></i> Links</a></li>
+					<li><a class="hot_link menu" data-page="links.html" href="#links"><i class="fas fa-question" aria-hidden="true"></i> Links</a></li>
+				</ul> 
+			</li>
+			<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="fab fa-dochub" aria-hidden="true"></i> ownload <span class="caret"></span></a>
+				<ul id="products-menu" class="dropdown-menu">
+					<li><a class="hot_link menu" data-page="wallet.html" href="#wallet"><i class="fas fa-wallet" aria-hidden="true"></i> Wallets</a></li>
+					<li><a class="hot_link menu" data-page="miners.html" href="#miners"><i class="fas fa-toolbox" aria-hidden="true"></i> Miners</a></li>
+					<li><a class="hot_link menu" data-page="chain.html" href="#chain"><i class="fas fa-link" aria-hidden="true"></i> Blockchain</a></li>
+				</ul> 
+			</li>
 
 			<li style="display:none;"><a class="hot_link" data-page="blockchain_block.html" href="#blockchain_block"><i class="fa fa-cubes"></i> Block</a></li>
 			<li style="display:none;"><a class="hot_link" data-page="blockchain_transaction.html" href="#blockchain_transaction"><i class="fa fa-cubes"></i> Transaction</a></li>
