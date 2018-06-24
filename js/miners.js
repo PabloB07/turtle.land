@@ -33,3 +33,12 @@ function xrigconf() {
         y.style.display = "none";
     }
 }
+
+function xrigccconf() {
+    var y = document.getElementById("xrigccconfdiv");
+    if (y.style.display === "none") {
+        y.style.display = "block";
+    } else {
+        y.style.display = "none";
+    }
+}
