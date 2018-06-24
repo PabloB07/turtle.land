@@ -218,7 +218,20 @@ $(function() {
     });
 });
 
-function tra() {
+$(function(){
+    $("#nav .dropdown").hover(
+      function() {
+        $('#products-menu.dropdown-menu', this).stop( true, true ).fadeIn("fast");
+        $(this).toggleClass('open');
+      },
+      function() {
+        $('#products-menu.dropdown-menu', this).stop( true, true ).fadeOut("fast");
+        $(this).toggleClass('open');
+      });
+  });
+
+
+  function tra() {
     var x = document.getElementById("tradiv");
     if (x.style.display === "none") {
         x.style.display = "block";
@@ -235,18 +248,6 @@ function blo() {
         x.style.display = "none";
     }
 };
-
-$(function(){
-    $("#nav .dropdown").hover(
-      function() {
-        $('#products-menu.dropdown-menu', this).stop( true, true ).fadeIn("fast");
-        $(this).toggleClass('open');
-      },
-      function() {
-        $('#products-menu.dropdown-menu', this).stop( true, true ).fadeOut("fast");
-        $(this).toggleClass('open');
-      });
-  });
 
 function hex2a(hexx) {
     var hex = hexx.toString();//force conversion
