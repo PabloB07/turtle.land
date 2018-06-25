@@ -1,5 +1,6 @@
 window.NETWORK_STAT_MAP = new Map(networkStat[symbol.toLowerCase()]);
 window.NETWORK_STAT_MAP2 = new Map(networkStat2[symbol.toLowerCase()]);
+window.NETWORK_STAT_MAP3 = new Map(networkStat3[symbol.toLowerCase()]);
 
 var customHash = function(str) {
     // custom hash function makes the potential color space tighter for the
@@ -175,6 +176,34 @@ NETWORK_STAT_MAP.forEach(function(url, host, map) {
     });
 });
 
+NETWORK_STAT_MAP3.forEach(function(url, host, map) {
+    $.getJSON(url + '/trtl', function(data, textStatus, jqXHR) {
+
+        var d = new Date(parseInt(data.pool.lastBlockFound));
+        var index = host.indexOf('/');
+        var poolName;
+
+        if (index < 0) {
+            poolName = host;
+        } else {
+            poolName = host.substr(0, index);
+        }
+
+        $('#pools_rows').append(renderPoolRow(host, poolName, data, d));
+
+        totalHashrate += parseInt(data.pool.hashrate);
+        totalMiners += parseInt(data.pool.miners);
+
+        updateText('totalPoolsHashrate', getReadableHashRateString(totalHashrate) + '/sec');
+        updateText('total_miners', localizeNumber(totalMiners));
+
+        poolStats.push([poolName, parseInt(data.pool.hashrate), colorHash.hex(poolName)]);
+
+    }).always(function() {
+        lazyRefreshChart();
+    });
+});
+
 NETWORK_STAT_MAP2.forEach(function(url, host, map) {
     var index = host.indexOf("/");
     var poolName;
@@ -221,6 +250,40 @@ setInterval(function(){
     poolStats = [];
 
     NETWORK_STAT_MAP.forEach(function(url, host, map) {
+
+        var index = host.indexOf("/");
+        var poolName;
+        if (index < 0) {
+            poolName = host;
+        } else {
+            poolName = host.substr(0, index);
+        }
+
+        $.getJSON(url + '/stats', (data, textStatus, jqXHR) => {
+            var d = new Date(parseInt(data.pool.lastBlockFound));
+            var datestring = renderDate(d);
+            var agostring = $.timeago(d);
+
+            totalHashrate += parseInt(data.pool.hashrate);
+            totalMiners += parseInt(data.pool.miners);
+
+            updateText('height-'+poolName, localizeNumber(data.network.height));
+            updateText('hashrate-'+poolName, localizeNumber(data.pool.hashrate)+' H/s');
+            updateText('miners-'+poolName, localizeNumber(data.pool.miners));
+            updateText('lastFound-'+poolName, datestring);
+            updateText('ago-'+poolName, agostring);
+            updateText('totalPoolsHashrate', getReadableHashRateString(totalHashrate) + '/sec');
+            updateText('total_miners', localizeNumber(totalMiners));
+            updateText('networkHashrate', getReadableHashRateString(lastStats.difficulty / blockTargetInterval) + '/sec');
+            updateText('networkDifficulty', getReadableDifficultyString(lastStats.difficulty, 0).toString());
+
+            poolStats.push([poolName, parseInt(data.pool.hashrate), colorHash.hex(poolName)]);
+        }).always(function() {
+            lazyRefreshChart();
+        });
+    });
+    
+    NETWORK_STAT_MAP3.forEach(function(url, host, map) {
 
         var index = host.indexOf("/");
         var poolName;
