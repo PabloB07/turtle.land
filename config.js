@@ -36,3 +36,11 @@ var networkStat2 = {
         ["trtl.cryptopool.space", "https://trtl.cryptopool.space/api"]
     ]
 };
+
+var networkStat3 = {
+    "trtl": [
+
+        ["cryptonote.social", "https://cryptonote.social/pool/statistics"]
+
+    ]
+};
