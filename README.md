@@ -9,6 +9,10 @@ If you wanna know more about TurtleCoin you can come to Discord on https://chat.
 
 And you can vitis GitHub on https://github.turtlecoin.lol/ (https://github.com/turtlecoin)
 
+```bash
+./TurtleCoind --enable-cors="*" --enable_blockexplorer --rpc-bind-ip=0.0.0.0 --rpc-bind-port=11898
+```
+
 
 
 
