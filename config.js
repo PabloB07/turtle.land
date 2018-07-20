@@ -21,6 +21,7 @@ var networkStat = {
         ["EU - turtle.mining.garden", "https://turtle.mining.garden:8117"],
         ["EU - trtl.unipool.pro", "https://pool.turtlecoin.fr:8117"],
         ["EU - trtl.ninja", "https://trtl.ninja/api"],
+        ["Turtle.Casa - Turtle.Land pool", "https://turtle.casa:8119"],
         //Asia
         ["AS - hk.turtlepool.space", "https://hk.turtlepool.space/api"],
         //GEO
@@ -30,7 +31,6 @@ var networkStat = {
 var networkStat2 = {
     "trtl": [
         ["trtl.pool.gntl.co.uk", "https://trtl.pool.gntl.co.uk/api"],
-        ["Turtle.Casa - Turtle.Land pool", "https://turtle.casa:8119"],
         ["trtl.semipool.com", "https://trtl-api.semipool.com"],
         ["cryptonote.social", "https://cryptonote.social"],
         ["turtle.bathmatminingpools.com", "https://api.turtle.bathmatminingpools.com/api"],
