@@ -30,6 +30,7 @@ var networkStat = {
 var networkStat2 = {
     "trtl": [
         ["trtl.pool.gntl.co.uk", "https://trtl.pool.gntl.co.uk/api"],
+        ["Turtle.Casa - Turtle.Land pool", "https://turtle.casa:8119"],
         ["trtl.semipool.com", "https://trtl-api.semipool.com"],
         ["cryptonote.social", "https://cryptonote.social"],
         ["turtle.bathmatminingpools.com", "https://api.turtle.bathmatminingpools.com/api"],
