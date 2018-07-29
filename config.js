@@ -1,4 +1,4 @@
-var api = 'https://api.turtle.land';
+var api = 'http://api.turtle.land:11898';
 var donationAddress = "TRTLuxu33ufRXw9kFiYFR9BqfJyvfr7jyR9SKwrXmx5R1iem9GSaQozKzUu3mc8vN17fWPriWueXX2vH6CWZg6oEGXoJ4HdN7ru";
 var blockTargetInterval = 30;
 var coinUnits = 100;
