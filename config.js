@@ -21,6 +21,7 @@ var networkStat = {
         ["EU - turtle.mining.garden", "https://turtle.mining.garden:8117"],
         ["EU - trtl.unipool.pro", "https://pool.turtlecoin.fr:8117"],
         ["EU - trtl.ninja", "https://trtl.ninja/api"],
+        ["EU - trtl.hackerknowledge.de", "https://pool.trtl.hackerknowledge.de:8119"],
         ["Turtle.Casa - Turtle.Land pool", "https://turtle.casa:8119"],
         //Asia
         ["AS - hk.turtlepool.space", "https://hk.turtlepool.space/api"],
